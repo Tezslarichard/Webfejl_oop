@@ -65,7 +65,7 @@ gomszab.play();
 console.log(gomszab.getTierlevel());
 
 
-const student = new Student("Géza", "Bolyai")
+
 
 //function Person(name){
 //    this.name = name
@@ -80,6 +80,26 @@ const student = new Student("Géza", "Bolyai")
 //
 //}
 
-Object.setPrototypeOf(Student.prototype, Person.prototype);
+class Person {
+    constructor(name,school){
+        this.name = name;
+        this.school = school;
+    }
 
+    getName(){
+        return this.name
+    }
+
+}
+
+class Student extends Person {
+    constructor(name, school) {
+        super(name)
+        this.school = school;
+    }
+}
+
+
+Object.setPrototypeOf(Student.prototype, Person.prototype);
+const student = new Student("Géza", "Bolyai");
 console.log("Név: " + student.getName()+ "  Iskola: " + student.school)

@@ -63,3 +63,23 @@ gomszab.play();
 gomszab.play();
 
 console.log(gomszab.getTierlevel());
+
+
+const student = new Student("Géza", "Bolyai")
+
+//function Person(name){
+//    this.name = name
+//}
+//Person.prototype.getName = function(){
+//    return this.name
+//}
+//
+//function Student(name, school){
+//    Person.call(this, name, school);
+//    this.school  = "Bolyai"
+//
+//}
+
+Object.setPrototypeOf(Student.prototype, Person.prototype);
+
+console.log("Név: " + student.getName()+ "  Iskola: " + student.school)

@@ -103,3 +103,43 @@ class Student extends Person {
 Object.setPrototypeOf(Student.prototype, Person.prototype);
 const student = new Student("Géza", "Bolyai");
 console.log("Név: " + student.getName()+ "  Iskola: " + student.school)
+
+
+class Animal{
+    constructor(name){
+        this.name = name;
+    }
+    sound(){
+        console.log(this.name + " hangot ad ki")
+    }
+}
+
+
+class Bird extends Animal{
+    constructor(name){
+        super(name)
+    }
+    repul(){
+        console.log(this.name + " repül")
+    }
+}
+
+class Mammal extends Animal{
+    constructor(name){
+        super(name)
+    }
+
+    lepeget(){
+        console.log(this.name + " lépeget")
+    }
+}
+
+const bird = new Bird("Hárpia") 
+bird.sound();
+bird.repul();
+
+const emlos = new Mammal("Tobzoska")
+emlos.sound();
+emlos.lepeget();
+
+

@@ -57,3 +57,26 @@ function innit() {
 }
 innit()
 
+
+class FormController{
+    #form
+    constructor(form){
+        this.#form = form
+    }
+    #getInputById(id){
+        return this.#form.quearySelector('#'+ id)
+    }
+    get lastname(){
+        const utolsonev = this.#getInputById('lastname')
+        return utolsonev.value
+    }
+    get firstname1(){
+        const elsonev1 = this.#getInputById('firstname1')
+        return elsonev1.value
+    }
+    get firtsname2(){
+        const elsonev2 = this.#getInputById('firstname2')
+        return elsonev2.value
+    }
+}
+

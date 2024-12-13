@@ -37,7 +37,7 @@ class Person{
         sor.appendChild(cella)
         cella.innerText = this.firstname1
         cella2.innerText = this.lastname
-        if(this.firstname2 === undefined)
+        if(this.firstname2 === undefined || this.firstname2 == "")
         {
             cella.colSpan = 2
         }
@@ -50,12 +50,26 @@ class Person{
 }
 
 function innit() {
+    const formkeres = document.getElementById('form')
+
     for(const per of array){
         const kapi = new Person(per)
-        kapi.render(document.getElementById("tbodyId"));
-    }        
+        kapi.render(document.getElementById("tbodyId"))
+    }  
+    const toltott = new FormController(form)
+    
+    formkeres.addEventListener('submit',function(e){
+        e.preventDefault()
+        const obje = {
+            firstname1 : toltott.firstname1,
+            firstname2 : toltott.firtsname2,
+            lastname : toltott.lastname
+        }
+        const pers = new Person(obje)
+        pers.render(document.getElementById("tbodyId"))
+    })
 }
-innit()
+
 
 
 class FormController{
@@ -64,7 +78,7 @@ class FormController{
         this.#form = form
     }
     #getInputById(id){
-        return this.#form.quearySelector('#'+ id)
+        return this.#form.querySelector('#'+ id)
     }
     get lastname(){
         const utolsonev = this.#getInputById('lastname')
@@ -80,3 +94,4 @@ class FormController{
     }
 }
 
+innit()

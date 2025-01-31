@@ -95,3 +95,4 @@ kepap.add_person_row({
     nev:'Dzsulio',
     eletkor: "6"
 })
+

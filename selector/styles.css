@@ -1,0 +1,129 @@
+/* Container Styles */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+    background: linear-gradient(145deg, #e8e8e8, #ffffff);
+  }
+  
+  /* Large Card Styles */
+  .largecard {
+    background: linear-gradient(145deg, #f39c12, #e67e22); /* Gradient effect */
+    margin-right: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .largecard:hover {
+    transform: translateY(-15px); /* Raised effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* More intense shadow */
+  }
+  
+  /* Card Styles */
+  .card {
+    background: linear-gradient(145deg, #ff6347, #ff4500); /* Gradient effect */
+    border-radius: 15px;
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    flex: 1;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+  }
+  
+  .card:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background: linear-gradient(145deg, #ff4500, #ff6347); /* Reverse gradient */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Subtle overlay */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .card:hover::after {
+    opacity: 1; /* Darkens on hover */
+  }
+  
+  /* Solution Section Styles */
+  .solution {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(145deg, #1abc9c, #16a085); /* Lush green gradient */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease;
+  }
+  
+  .solution:hover {
+    background: linear-gradient(145deg, #16a085, #1abc9c); /* Reversed gradient on hover */
+  }
+  
+  /* Adjusted Card Styles for Solution Section */
+  .solution .card {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Purple gradient */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    position: relative;
+  }
+  
+  .solution .card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #8e44ad, #9b59b6); /* Reversed gradient */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .solution .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+  }
+  
+  .solution .card:hover::after {
+    opacity: 1; /* Darkens on hover */
+  }
+  
